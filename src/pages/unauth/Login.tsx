@@ -16,6 +16,9 @@ function Login() {
       .then((userCredential) => {
         setUser(userCredential.user);
       })
+      .then(() => {
+        navigate("/");
+      })
       .catch(() => {
         console.error("Not logged in");
       });

@@ -1,10 +1,11 @@
 import { useCallback } from "react";
 import AuthUserView from "./AuthUserView";
 import WorkerViews from "./WorkerViews";
+import useAuthStore from "../zustand/usersManager";
 
 function AuthenticatedView() {
-  const user = "andrea@utente.evricar.it";
-  const type = user.split("@")[1];
+  const { user } = useAuthStore();
+  const type = user?.email?.split("@")[1];
 
   const renderView = useCallback(() => {
     if (type === "utente.evricar.it") {
