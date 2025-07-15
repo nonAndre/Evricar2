@@ -31,7 +31,7 @@ function Login() {
           <img src={logo} className="w-5/12" />
         </div>
         <div className="flex flex-col  w-full h-7/12 gap-9 px-5">
-          <p className="flex px-4 pt-5 text-2xl text-green-400 font-bold">
+          <p className="flex px-4 pt-5 text-xl text-green-400 font-bold">
             Login
           </p>
           <input

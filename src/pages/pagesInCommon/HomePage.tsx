@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import carsLogo from "../../data/logos";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col h-screen bg-blue-900">
       <Header />
@@ -32,6 +35,9 @@ export default function HomePage() {
             <button
               key={index}
               className="flex flex-col items-center w-4/12 h-full cursor-pointer bg-white rounded-2xl hover:bg-gray-300"
+              onClick={() =>
+                navigate("/catalog", { state: { name: item.name } })
+              }
             >
               <img src={item.logoPath} className="w-5/12 h-4/5 pt-2" />
               <p>{item.name}</p>
@@ -40,11 +46,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex flex-col w-full h-full px-4 py-10">
+      <div className="flex flex-col w-full h-full px-4 py-10 bg-blue-900">
         <h1 className="text-green-400 font-bold text-3xl">
           Evricar: Where Luxury Meets Performance
         </h1>
-        <p className=" text-xl pt-3">
+        <p className=" text-xl pt-3 text-white">
           At Evricar, we don’t just sell cars — we deliver automotive
           excellence. As a premier luxury car dealer, we specialize in high-end
           vehicles that combine cutting-edge technology with timeless design.

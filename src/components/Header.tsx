@@ -48,7 +48,7 @@ export default function Header() {
       ) : (
         <div></div>
       )}
-      <div className="flex sticky top-0 z-50 w-full min-h-[6rem] sm:min-h-[5rem] items-center px-4 justify-between bg-white shadow-md">
+      <div className="flex sticky top-0 z-50 w-full min-h-[6rem] sm:min-h-[5rem] items-center px-4 justify-between bg-white ">
         <div className="flex h-full items-center  w-1/2">
           <p className="font-bold text-3xl text-green-400">Evricar</p>
         </div>
