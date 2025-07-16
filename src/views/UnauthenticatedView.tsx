@@ -11,7 +11,7 @@ function UnauthenticatedView() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<CatalogDisplayer />} />
-        <Route path="/carDisplayer" element={<CarDisplayer />} />
+        <Route path="/catalog/carDisplayer" element={<CarDisplayer />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
       </Routes>

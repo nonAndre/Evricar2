@@ -65,11 +65,18 @@ export default function Header() {
         ) : (
           <div className="flex  h-full items-center justify-end  w-1/2 gap-3">
             <button
+              className="flex justify-center text-black w-1/6 max-sm:w-1/3 border-2 border-green-900 font-bold items-center rounded-2xl cursor-pointer hover:bg-green-900 hover:text-white"
+              onClick={() => navigate("/showOrders")}
+            >
+              <p className="flex">Your orders</p>
+            </button>
+            <button
               className="flex justify-center text-black w-1/6 max-sm:w-1/3 border-2 border-red-900 font-bold items-center rounded-2xl cursor-pointer hover:bg-red-900 hover:text-white"
               onClick={() => setIsOpen(true)}
             >
               <p className="flex">Logout</p>
             </button>
+
             <button className="flex justify-center text-black w-1/6 max-sm:w-1/3 border-2 border-blue-900 font-bold items-center rounded-2xl cursor-pointer hover:bg-blue-900 hover:text-white">
               <p className="flex">{name}</p>
             </button>

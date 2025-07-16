@@ -17,7 +17,7 @@ export default function CarDisplayer() {
     if (mail === null || mail === undefined) {
       setIsOpen(true);
     } else {
-      navigate("/customize", { state: { car: car } });
+      navigate("/catalog/carDisplayer/customize", { state: { car: car } });
     }
   };
 

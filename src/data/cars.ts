@@ -1,15 +1,15 @@
 import audiLogo from "../Image/Audi/AudiLogo.png";
 import A1 from "../Image/Audi/AudiA1.png";
 import A1inside from "../Image/Audi/A1Collage.jpeg";
-import A5 from "../Image/Audi/AudiA5.jpeg";
+import A5 from "../Image/Audi/AudiA5.png";
 import A5inside from "../Image/Audi/A5Collage.jpeg";
 import RS3 from "../Image/Audi/AudiRS3.png";
 import RS3inside from "../Image/Audi/Rs3Collage.jpeg";
 
 import lamborghiniLogo from "../Image/Lamborghini/LamborghiniLogo.png";
-import  Aventador from "../Image/Lamborghini/LamborghiniAventador.png";
-import Huracan from "../Image/Lamborghini/LamborghiniHuracan.png";
-import STO from "../Image/Lamborghini/LamborghiniSTO.jpeg";
+import  Aventador from "../Image/Lamborghini/Aventador.png";
+import Huracan from "../Image/Lamborghini/huracan.png";
+import STO from "../Image/Lamborghini/STO.png";
 import  AventadorInside from "../Image/Lamborghini/AventadorCollage.jpeg";
 import HuracanInside from "../Image/Lamborghini/HuracanCollage.jpeg";
 import STOInside from "../Image/Lamborghini/StoCollage.jpeg";
@@ -18,7 +18,7 @@ import STOInside from "../Image/Lamborghini/StoCollage.jpeg";
 import mercedesLogo from "../Image/Mercedes/MercedesLogo.png";
 import GT from "../Image/Mercedes/MercedesAmgGt.png";
 import GLC from "../Image/Mercedes/MercedesGLC.png";
-import AClass from "../Image/Mercedes/MercedesClasseA.png";
+import AClass from "../Image/Mercedes/Aclass.png";
 import GTInside from "../Image/Mercedes/AmgGtCollage.jpeg";
 import GLCInside from "../Image/Mercedes/GlcCollage.jpeg";
 import AClassInside from "../Image/Mercedes/Acollage.jpeg";
@@ -33,7 +33,7 @@ import MachEInside from "../Image/Mustang/MachECollage.jpeg";
 
 import renaultLogo from "../Image/Renault/RenaultLogo.png";
 import Austral from "../Image/Renault/RenaultAustral.png"
-import Clio from "../Image/Renault/RenaultClio.jpeg";
+import Clio from "../Image/Renault/clio.png";
 import Megane from "../Image/Renault/RenaultMeganeE-tech.png"
 import AustralInside from "../Image/Renault/AustralCollage.jpeg";
 import ClioInside from "../Image/Renault/ClioCollage.jpeg";
@@ -42,7 +42,7 @@ import MeganeInside from "../Image/Renault//MeganCollage.jpeg"
 import teslaLogo from "../Image/Tesla/TeslaLogo1.png";
 import Model3 from "../Image/Tesla/TeslaModel3.png";
 import ModelS from "../Image/Tesla/TeslaModelS.png";
-import ModelY from "../Image/Tesla/TeslaModelY.jpeg";
+import ModelY from "../Image/Tesla/Y.png";
 import Model3Inside from "../Image/Tesla/3Collage.jpeg";
 import ModelSInside from "../Image/Tesla/SCollage.jpeg";
 import ModelYInside from "../Image/Tesla/TeslaModelY.jpeg";
@@ -139,7 +139,7 @@ const cars = [
     length: 4.73, // in meters
     height: 1.28, // in meters
     width: 1.94,  // in meters
-    price: 97001, // in USD
+    price: 97.001, // in USD
   },
   {
     id: 8,
@@ -153,7 +153,7 @@ const cars = [
     length: 4.72, // in meters
     height: 1.64, // in meters
     width: 1.89,  // in meters
-    price: 48001, // in USD
+    price: 48.001, // in USD
   },
   {
     id: 9,
@@ -167,7 +167,7 @@ const cars = [
     length: 4.42, // in meters
     height: 1.44, // in meters
     width: 1.80,  // in meters
-    price: 37001, // in USD
+    price: 37.001, // in USD
   },
   {
     id: 10,
@@ -181,7 +181,7 @@ const cars = [
     length: 4.83, // in meters
     height: 1.38, // in meters
     width: 1.92,  // in meters
-    price: 79001, // in USD
+    price: 79.001, // in USD
   },
   {
     id: 11,
@@ -195,7 +195,7 @@ const cars = [
     length: 4.71, // in meters
     height: 1.62, // in meters
     width: 1.88,  // in meters
-    price: 46001, // in USD
+    price: 46.001, // in USD
   },
   {
     id: 12,
@@ -209,7 +209,7 @@ const cars = [
     length: 4.51, // in meters
     height: 1.62, // in meters
     width: 1.84,  // in meters
-    price: 39001, // in USD
+    price: 39.001, // in USD
   },
   {
     id: 13,
@@ -223,7 +223,7 @@ const cars = [
     length: 4.05, // in meters
     height: 1.44, // in meters
     width: 1.79,  // in meters
-    price: 21001, // in USD
+    price: 21.001, // in USD
   },
   {
     id: 14,
@@ -237,7 +237,7 @@ const cars = [
     length: 4.36, // in meters
     height: 1.45, // in meters
     width: 1.81,  // in meters
-    price: 31001, // in USD
+    price: 31.001, // in USD
   },
   {
     id: 15,
@@ -251,7 +251,7 @@ const cars = [
     length: 4.72, // in meters
     height: 1.44, // in meters
     width: 1.85,  // in meters
-    price: 39001, // in USD
+    price: 39.001, // in USD
   },
   {
     id: 16,
@@ -265,7 +265,7 @@ const cars = [
     length: 4.97, // in meters
     height: 1.45, // in meters
     width: 1.96,  // in meters
-    price: 74001, // in USD
+    price: 74.001, // in USD
   },
   {
     id: 17,
@@ -279,7 +279,7 @@ const cars = [
     length: 4.75, // in meters
     height: 1.62, // in meters
     width: 1.92,  // in meters
-    price: 46001, // in USD
+    price: 46.001, // in USD
   },
 ];
 

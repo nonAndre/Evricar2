@@ -47,7 +47,9 @@ export default function CatalogDisplayer() {
             <button
               key={index}
               className="flex flex-col items-center bg-white rounded-2xl hover:bg-gray-200 p-4 w-56 justify-center shadow cursor-pointer"
-              onClick={() => navigate("/carDisplayer", { state: { car: car } })}
+              onClick={() =>
+                navigate("/catalog/carDisplayer", { state: { car: car } })
+              }
             >
               <img
                 src={car.photo}
