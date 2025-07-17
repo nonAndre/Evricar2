@@ -9,6 +9,7 @@ import type { ReadyOrdersResult, UsersOrders } from "../types/car";
 export default function Header() {
   const { user, setUser } = useAuthStore();
   const name = user?.email?.split("@")[0];
+  const type = user?.email?.split("@")[1];
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -110,20 +111,24 @@ export default function Header() {
           </div>
         ) : (
           <div className="flex  h-full items-center justify-end  w-1/2 gap-3">
-            <button
-              className={`flex justify-center  ${
-                hasReadyOrders
-                  ? "w-1/3 text-white bg-green-400 hover:bg-green-600"
-                  : "w-1/6 text-black hover:bg-green-600"
-              } max-sm:w-1/3 border-2 border-green-400 font-bold items-center rounded-2xl cursor-pointer  hover:text-white`}
-              onClick={() => navigate("/showOrders")}
-            >
-              {hasReadyOrders ? (
-                <p>You're order is ready</p>
-              ) : (
-                <p className="flex">Your orders</p>
-              )}
-            </button>
+            {type === "utente.evricar.it" ? (
+              <button
+                className={`flex justify-center  ${
+                  hasReadyOrders
+                    ? "w-1/3 text-white bg-green-400 hover:bg-green-600"
+                    : "w-1/6 text-black hover:bg-green-600"
+                } max-sm:w-1/3 border-2 border-green-400 font-bold items-center rounded-2xl cursor-pointer  hover:text-white`}
+                onClick={() => navigate("/showOrders")}
+              >
+                {hasReadyOrders ? (
+                  <p>You're order is ready</p>
+                ) : (
+                  <p className="flex">Your orders</p>
+                )}
+              </button>
+            ) : (
+              <div></div>
+            )}
             <button
               className="flex justify-center text-black w-1/6 max-sm:w-1/3 border-2 border-red-900 font-bold items-center rounded-2xl cursor-pointer hover:bg-red-900 hover:text-white"
               onClick={() => setIsOpen(true)}
