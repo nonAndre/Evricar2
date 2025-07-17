@@ -16,7 +16,7 @@ function SignUp() {
       })
       .then(() => {
         setTimeout(() => {
-          navigate("/");
+          navigate("/login");
         }, 1800);
       })
       .catch(() => {

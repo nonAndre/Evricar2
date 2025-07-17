@@ -21,8 +21,6 @@ export default function CarDisplayer() {
     }
   };
 
-  console.log(car);
-
   return (
     <>
       {isOpen ? (

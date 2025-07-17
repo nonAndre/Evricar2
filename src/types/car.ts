@@ -16,7 +16,7 @@ export type UsersOrders={
     idUser:string | undefined ,
     mail: string | null | undefined ,
     userName: string | undefined,
-    orders : Document[]
+    orders : Orders[]
 }
 
 export type Orders = {
@@ -27,7 +27,9 @@ export type Orders = {
         color: string | null;
         seat: string | null;
     };
-    price: number
+    price: number,
+    photo:string,
+    isReady:boolean
 };
 
 
@@ -35,4 +37,9 @@ export type Orders = {
 export type CustomizationOptions = {
   color: string | null;
   seat: string | null;
+};
+
+export type ReadyOrdersResult = {
+  hasReadyOrders: boolean;
+  readyOrders: Orders[];
 };

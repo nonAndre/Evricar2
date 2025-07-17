@@ -43,6 +43,8 @@ export default function CustomizeCar() {
       model: car.model,
       optional: customization,
       price: cost,
+      photo: car.photo,
+      isReady: false,
     };
 
     const q = query(
