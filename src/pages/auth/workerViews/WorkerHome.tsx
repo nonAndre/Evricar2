@@ -7,14 +7,10 @@ import {
 } from "firebase/firestore";
 import Header from "../../../components/Header";
 import { db } from "../../../Firebase/firebaseConfig";
-import { useQuery } from "@tanstack/react-query";
 import type { Orders, UsersOrders } from "../../../types/car";
-import useAuthStore from "../../../zustand/usersManager";
 import { useEffect, useState } from "react";
 
 export default function WorkerHome() {
-  const { user } = useAuthStore();
-
   const [data, setData] = useState<UsersOrders[]>([]);
   const [refetch, setRefetch] = useState(true);
 
@@ -34,11 +30,6 @@ export default function WorkerHome() {
 
     setData(ordini);
   };
-
-  /* const { data, refetch, isLoading, isError } = useQuery({
-    queryKey: ["archive"],
-    queryFn: fetchCars,
-  });*/
 
   const deleteOrder = async (
     orderToDelete: string,
@@ -103,8 +94,6 @@ export default function WorkerHome() {
       console.error("Error updating order:", error);
     }
   };
-
-  console.log(data);
 
   useEffect(() => {
     if (refetch === true) {
