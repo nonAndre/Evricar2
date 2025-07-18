@@ -50,12 +50,9 @@ export default function Header() {
 
   const { hasReadyOrders, readyOrders } = getReadyOrders(data);
 
-  console.log(data);
-
-  console.log(readyOrders);
-
   const logout = () => {
     setUser(null);
+    navigate("/");
   };
 
   return (
@@ -130,7 +127,7 @@ export default function Header() {
               <div></div>
             )}
             <button
-              className="flex justify-center text-black w-1/6 max-sm:w-1/3 border-2 border-red-900 font-bold items-center rounded-2xl cursor-pointer hover:bg-red-900 hover:text-white"
+              className="flex justify-center text-black  w-1/6 max-sm:w-1/3 border-2 border-red-900 font-bold items-center rounded-2xl cursor-pointer hover:bg-red-900 hover:text-white"
               onClick={() => setIsOpen(true)}
             >
               <p className="flex">Logout</p>

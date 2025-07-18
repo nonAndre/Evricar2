@@ -36,11 +36,13 @@ function Login() {
           </p>
           <input
             placeholder="Email"
+            type="email"
             className=" flex border-b-2 pt-5 border-gray-300   px-4"
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             placeholder="Password"
+            type="password"
             className="flex border-b-2 pt-5 border-gray-300  px-4"
             onChange={(e) => setPassword(e.target.value)}
           />

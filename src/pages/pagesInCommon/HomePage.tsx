@@ -28,19 +28,27 @@ export default function HomePage() {
       </div>
 
       <div className="flex flex-col w-full bg-blue-900 gap-4 px-4 py-5">
-        <p className="flex  text-white text-4xl font-bold">Popular Brands</p>
+        <p className="text-white text-2xl md:text-4xl font-bold">
+          Popular Brands
+        </p>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
           {carsLogo.map((item, index) => (
             <button
               key={index}
-              className="flex flex-col items-center w-4/12 h-full cursor-pointer bg-white rounded-2xl hover:bg-gray-300"
+              className="flex-shrink-0 flex flex-col items-center w-36 sm:w-40 md:w-44 lg:w-48 xl:w-56 bg-white rounded-2xl hover:bg-gray-300 transition duration-200"
               onClick={() =>
                 navigate("/catalog", { state: { name: item.name } })
               }
             >
-              <img src={item.logoPath} className="w-5/12 h-4/5 pt-2" />
-              <p>{item.name}</p>
+              <img
+                src={item.logoPath}
+                alt={item.name}
+                className="w-20 h-20 object-contain mt-3"
+              />
+              <p className="text-sm sm:text-base font-medium py-2">
+                {item.name}
+              </p>
             </button>
           ))}
         </div>

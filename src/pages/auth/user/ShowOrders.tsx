@@ -9,7 +9,6 @@ import {
 import Header from "../../../components/Header";
 import useAuthStore from "../../../zustand/usersManager";
 import { useQuery } from "@tanstack/react-query";
-import icon from "../../../assets/trash-svgrepo-com.svg";
 import type { Orders, UsersOrders } from "../../../types/car";
 
 export default function ShowOrders() {
@@ -75,54 +74,69 @@ export default function ShowOrders() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-blue-900 overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-blue-900 overflow-hidden">
       <Header />
 
-      <div className="flex flex-col h-full overflow-y-auto p-4 space-y-6">
+      <div className="flex flex-col flex-1 overflow-y-auto p-4 space-y-6">
         {data.map((userOrders: UsersOrders, userIndex: number) => (
           <div key={userIndex} className="space-y-4">
             {userOrders.orders.map((order: Orders, orderIndex: number) => (
               <div
                 key={orderIndex}
-                className="flex rounded-lg overflow-hidden bg-white gap-4 shadow-md"
+                className="flex flex-col md:flex-row rounded-lg overflow-hidden bg-white gap-4 shadow-md"
               >
-                <div className="w-1/4">
-                  <img src={order.photo} alt="Order" className="object-cover" />
+                <div className="w-full md:w-1/3 h-48 md:h-auto">
+                  <img
+                    src={order.photo}
+                    alt="Order"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                <div className="flex flex-col w-full  p-4 text-black">
-                  <div className="flex w-full h-full  justify-between">
-                    <div className="flex flex-row gap-2 text-3xl font-bold pb-3">
+                <div className="flex flex-col w-full p-4 text-black space-y-2">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <div className="flex flex-wrap gap-2 text-2xl sm:text-3xl font-bold">
                       <p>{order.brand}</p>
                       <p>{order.model}</p>
                     </div>
                     <button
-                      disabled={order.isReady === false ? true : false}
-                      className="flex justify-center  items-center w-13 h-13 self-center cursor-pointer hover:bg-red-400 rounded-full"
+                      className={`flex h-full w-1/4 bg-red-500 items-center justify-center rounded-sm px-2  hover:bg-red-700 ${
+                        order.isReady ? "cursor-pointer " : "cursor-not-allowed"
+                      }`}
+                      disabled={!order.isReady}
                       onClick={() => deleteOrder(order.idOrder)}
                     >
-                      <img src={icon} className="object-cover w-8 h-8"></img>
+                      <p className="text-xl text-white font-bold">Deny Order</p>
                     </button>
                   </div>
-                  <p className="text-xl pb-3">Order Id : {order.idOrder}</p>
 
-                  <p className="text-xl pb-3">Color: {order.optional.color}</p>
-                  <p className="text-xl pb-3">
-                    Seat Color: {order.optional.seat}
+                  <p className="text-base sm:text-lg lg:text-xl">
+                    <span className="font-semibold">Order ID:</span>{" "}
+                    {order.idOrder}
+                  </p>
+                  <p className="text-base sm:text-lg lg:text-xl">
+                    <span className="font-semibold">Color:</span>{" "}
+                    {order.optional.color}
+                  </p>
+                  <p className="text-base sm:text-lg lg:text-xl">
+                    <span className="font-semibold">Seat Color:</span>{" "}
+                    {order.optional.seat}
+                  </p>
+                  <p className="text-base sm:text-lg lg:text-xl">
+                    <span className="font-semibold">Price:</span> {order.price}{" "}
+                    $
                   </p>
 
-                  <p className="text-xl pb-3">Price: {order.price} $</p>
-
                   <p
-                    className={` pb-3 ${
+                    className={`pt-2 ${
                       order.isReady
-                        ? "text-blue-900 font-bold text-3xl"
-                        : "text-black font-bold text-lg "
+                        ? "text-blue-900 font-bold text-xl sm:text-2xl"
+                        : "text-black font-semibold text-base"
                     }`}
                   >
-                    {order.isReady === true
-                      ? "You're car is ready to be delivered!"
-                      : "order not ready , the delete button won't work until the car is delivered"}
+                    {order.isReady
+                      ? "Your car is ready to be delivered!"
+                      : "Order not ready. The delete button won't work until the car is delivered."}
                   </p>
                 </div>
               </div>

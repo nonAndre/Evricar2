@@ -24,13 +24,13 @@ export default function CarDisplayer() {
   return (
     <>
       {isOpen ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className=" flex fixed inset-0 z-50  items-center justify-center">
           <div
             className="absolute inset-0 bg-black/50"
             onClick={() => setIsOpen(false)}
           ></div>
 
-          <div className="relative bg-white w-2/6 p-6 rounded-lg shadow-lg z-50 flex flex-col justify-between">
+          <div className="relative bg-white w-2/3 md:w-2/6 p-6 rounded-lg shadow-lg z-50 flex flex-col justify-between">
             <div>
               <h1 className="font-bold text-lg">
                 You can't customize the car if you are not logged in.
@@ -42,7 +42,7 @@ export default function CarDisplayer() {
                 className="cursor-pointer h-10 w-1/3 bg-blue-700 hover:bg-blue-900 rounded text-white"
                 onClick={() => setIsOpen(false)}
               >
-                <p className="text-xl text-center">Nevermind</p>
+                <p className="text-xl text-center">Back</p>
               </button>
 
               <button
@@ -71,10 +71,10 @@ export default function CarDisplayer() {
                 Price starts from: {car.price} $
               </p>
               <button
-                className="border-2 border-green-300 rounded-2xl w-1/5 bg-white text-black cursor-pointer hover:bg-green-300 hover:text-white"
+                className="flex border-2 border-green-300 rounded-2xl  bg-white cursor-pointer hover:bg-green-300 hover:text-white"
                 onClick={() => checkUser()}
               >
-                Customize
+                <p className=" text-black ">Customize</p>
               </button>
             </div>
           </div>
