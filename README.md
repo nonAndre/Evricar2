@@ -1,69 +1,84 @@
-# React + TypeScript + Vite
+# 🏎️ Evricar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Evricar** is a modern app designed to manage a car dealership.
 
-Currently, two official plugins are available:
+This app provides to possible use cases
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. User: if you sign up with an email like yourname@utente.evricar.it
+2. Employees: if you sign up with an email like yourname@dip.evricar.it
+3. Non-logged user: You can explore the menus but you can't customize the cars
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔍 Behind the Scenes
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+SmartLibrary is built using a powerful modern stack:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ⚛️ **React (TypeScript)**
+- 🔥 **Firebase** – for authentication and data storage
+- 🧠 **TanStack Query** – for caching and async data management
+- 🪢 **Zustand** – for lightweight state management
+- 🎨 **Tailwind CSS** – for elegant and responsive styling
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Features
+
+### 🛒 1. Catalog & Customization (User Side)
+
+    Browse a wide selection of cars.
+
+    Logged-in users can customize their vehicles.
+
+    Submit orders directly through the app.
+
+### 📋 2. Order Management (Employee Side)
+
+    Employees can view, accept, or deny incoming orders.
+
+    Streamlined interface for efficient decision-making.
+
+---
+
+## ⚙️ Setup
+
+### 1. 📥 Clone the Repository
+
+```bash
+git clone https://github.com/nonAndre/Evricar2.git
+cd Evricar2
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. 💻 Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+nvm use
+npm install
 ```
+### 3. 🛠️ Configure Environment Variables
+
+Create a ```.env``` file in the root of the project and add the following:
+
+```bash
+VITE_APIKEY=your_key
+VITE_AUTHDOMAIN=your_key
+VITE_PROJECTID=your_key
+VITE_STORAGEBUCKET=your_key
+VITE_MESSAGESENDERID=your_key
+VITE_APPID=your_key
+
+```
+
+## 4. ▶️ Run the App
+```bash
+npm run dev
+```
+
+## 📌 Notes
+
+Make sure to use correct email formats (utente.evricar.it for users, dip.evricar.it for employees) to access the respective features.
+
+Firebase credentials must be properly set in .env for the app to run correctly.
+
+## 🛠️ Contributing
+
+We welcome contributions! Feel free to fork the repo, open pull requests, or submit issues for improvements and bug fixes.
