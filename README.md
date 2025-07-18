@@ -8,7 +8,7 @@ This app provides to possible use cases
 2. Employees: if you sign up with an email like yourname@dip.evricar.it
 3. Non-logged user: You can explore the menus but you can't customize the cars
 
----
+
 
 ## 🔍 Behind the Scenes
 
@@ -19,25 +19,25 @@ SmartLibrary is built using a powerful modern stack:
 - 🧠 **TanStack Query** – for caching and async data management
 - 🪢 **Zustand** – for lightweight state management
 - 🎨 **Tailwind CSS** – for elegant and responsive styling
----
+
 
 ## 🚀 Features
 
 ## 🛒 1. Catalog & Customization (User Side)
 
-    Browse a wide selection of cars.
+Browse a wide selection of cars.
 
-    Logged-in users can customize their vehicles.
+Logged-in users can customize their vehicles.
 
-    Submit orders directly through the app.
+Submit orders directly through the app.
 
 ## 📋 2. Order Management (Employee Side)
 
-    Employees can view, accept, or deny incoming orders.
+Employees can view, accept, or deny incoming orders.
 
-    Streamlined interface for efficient decision-making.
+Streamlined interface for efficient decision-making.
 
----
+
 
 ## ⚙️ Setup
 
