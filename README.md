@@ -23,7 +23,7 @@ SmartLibrary is built using a powerful modern stack:
 
 ## 🚀 Features
 
-### 🛒 1. Catalog & Customization (User Side)
+## 🛒 1. Catalog & Customization (User Side)
 
     Browse a wide selection of cars.
 
@@ -31,7 +31,7 @@ SmartLibrary is built using a powerful modern stack:
 
     Submit orders directly through the app.
 
-### 📋 2. Order Management (Employee Side)
+## 📋 2. Order Management (Employee Side)
 
     Employees can view, accept, or deny incoming orders.
 
